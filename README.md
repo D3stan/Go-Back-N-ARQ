@@ -9,14 +9,6 @@ Note: lost packets are **client-side emulated**
 - **Automatic retransmission** of lost packets based on ACK timeout.
 - Ability to simulate packet loss for testing purposes.
 - **Window-based transmission** to optimize the flow of data.
-  
-## Table of Contents
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [How It Works](#how-it-works)
-- [Troubleshooting](#troubleshooting)
-- [License](#license)
 
 ---
 
