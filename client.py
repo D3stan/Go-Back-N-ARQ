@@ -73,7 +73,7 @@ while True:
                 print(f"✓ Received: {recieved_packets}")
                 print(f"✗ Lost:     {lost_packets}\n")
             else:
-                print("\n[!] Timeout! No ACK received for packet {base}. Retrying current window...\n")
+                print(f"\n[!] Timeout! No ACK received for packet {base}. Retrying current window...\n")
 
             next_seq = base  # Retransmit entire window
 

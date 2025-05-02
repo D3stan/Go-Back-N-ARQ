@@ -4,7 +4,7 @@ This project implements a **Go-Back-N Automatic Repeat reQuest (ARQ)** protocol 
 Note: lost packets are **client-side emulated**
 
 ## Features
-- **Reliable UDP communication** using Go-Back-N ARQ.
+- Reliable **UDP** communication using **Go-Back-N ARQ**.
 - Configurable packet transmission settings (port, timeout, etc.) via a **`.ini`** configuration file.
 - **Automatic retransmission** of lost packets based on ACK timeout.
 - Ability to simulate packet loss for testing purposes.

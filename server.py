@@ -27,14 +27,14 @@ while True:
             index = current  # Reset to beginning of current window
             
         if current == index:
-            print(f"[✓] Bit {current + 1} received → Sending ACK...")
+            print(f"[✓] Packet {current + 1} received → Sending ACK...")
             s.sendto(f"{current}".encode(), client_addr)
             index += 1
             time.sleep(0.5)
         
         data, _ = s.recvfrom(1024)
         current = int(data.decode())
-        print(f"[⇾] Received bit: {current + 1}")
+        print(f"[⇾] Received Packet: {current + 1}")
             
         if current == 0:
             print("\n[•] Transmission ended\n" + "-"*48 + "\n")
