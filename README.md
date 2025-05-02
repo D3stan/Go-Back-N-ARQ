@@ -33,7 +33,7 @@ The configuration is done via a simple `.ini` file. The `client ip` is left **bl
 ```ini
 # Client settings
 [CLIENT]
-ip =
+ip =    ; blank by default
 port = 1235
 timeout = 3.0
 
@@ -77,6 +77,26 @@ This project implements the Go-Back-N ARQ protocol over UDP using Python:
 - Successful transmission is logged with stats: number of packets sent, acknowledged, and lost.
 
 Communication occurs over two UDP sockets defined in `config.ini`, defaulting to ports `1235` (client) and `1236` (server).
+
+```mermaid
+graph TD
+    A[Client: Start transmission] --> B{Has unACKed packets?}
+    B -- Yes --> C[Send packets within window]
+    C --> D[Randomly simulate packet loss]
+    D --> E{Packet delivered?}
+    E -- Yes --> F[Server: Receive packet]
+    F --> G[Send ACK for packet]
+    G --> H[Client receives ACK]
+    H --> I[Mark packet as acknowledged]
+    I --> B
+    E -- No --> B
+
+    B -- No --> J{All packets ACKed?}
+    J -- No --> K[Timeout occurs]
+    K --> L[Retransmit window]
+    L --> B
+    J -- Yes --> M[End transmission]
+```
 
 ---
 
