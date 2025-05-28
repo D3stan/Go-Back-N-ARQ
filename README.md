@@ -17,7 +17,7 @@ Note: lost packets are **client-side emulated**
 ### Prerequisites
 
 Ensure you have the following installed:
-- **Python 3.x**: The project is developed using Python 3.x.
+- **Python 3.x**: The project is developed using Python 3
 - **Required Libraries**: The project depends on Python's `socket` and `configparser` libraries, which are built-in.
 
 No additional packages are required.
@@ -47,7 +47,7 @@ timeout = 3.0
 
 ## 🏃‍♂️‍➡️ Usage
 
-1. **Install Python 3.7+** if not already installed.
+1. **Install Python 3** if not already installed.
 
 2. **Clone the repository**:  
    `git clone https://github.com/D3stan/Go-Back-N-ARQ.git`  
